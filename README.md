@@ -1,6 +1,7 @@
 # Potions
 
-<img align="right" src="./potions.svg?sanitize=true" width="500">
+<img align="right" width="500" src="./src/potions-light.svg?sanitize=true#gh-light-mode-only">
+<img align="right" width="500" src="./src/potions-dark.svg?sanitize=true#gh-dark-mode-only">
 
 ## Design
 
@@ -43,7 +44,7 @@ CSS can be easily included in SVGs using the `<foreignObject>` tag. Simply inser
 
 ## Dark Mode Detection
 
-Since GitHub has a dark mode, we need to account for that in the design. Luckily, CSS introduced the `prefers-color-scheme` property in 2019. So we can throw some fairly simple media queries in our CSS to handle that. The hex values below match GitHub's light and dark colour scheme:
+Since GitHub has a dark mode, we need to account for that in the design. Luckily, CSS introduced the `prefers-color-scheme` property in 2019. So we can throw some fairly simple media queries in our CSS to handle that. For instance:
 
 <!-- prettier-ignore -->
 ```css
@@ -55,11 +56,11 @@ Since GitHub has a dark mode, we need to account for that in the design. Luckily
 }
 ```
 
-An alternative method of dark-mode detection does exist. However, it is specific to [GitHub flavoured markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#specifying-the-theme-an-image-is-shown-to) and as such, may not always work when the file is viewed from an external source. E.g. [NPM](https://www.npmjs.com/), [crates.io](https://crates.io/), ...
+However, it no longer works here, and is most likely deliberately not supported. Fortunately, an alternative method of dark-mode detection does exist; specific to [GitHub flavoured markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#specifying-the-theme-an-image-is-shown-to). Still, it does come with caveats. It requires two files, and may not always work when the readme is viewed from an external source. (E.g. [NPM](https://www.npmjs.com/), [crates.io](https://crates.io/), ...). Neither is a significant problem in this instance.
 
 ```
-![Potions](./potions.svg#gh-light-mode-only)
-![Potions](./potions.svg#gh-dark-mode-only)
+![Potions](./potions-light.svg#gh-light-mode-only)
+![Potions](./potions-dark.svg#gh-dark-mode-only)
 ```
 
 ## Acknowledgements
@@ -68,8 +69,3 @@ An alternative method of dark-mode detection does exist. However, it is specific
 - [Inkscape](https://inkscape.org/)
 - [SVGO](https://github.com/svg/svgo)
 - [CSS in README](https://github.com/sindresorhus/css-in-readme-like-wat)
-
-<!-- Add webkit version for mac? -->
-<!-- Resize Potion SVG at top of page -->
-<!-- Does it lag on GitHub Profile? -->
-<!-- Force the animation section under the potions.svg in readme -->
