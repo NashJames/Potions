@@ -5,13 +5,13 @@
 
 ## Design
 
-The first mock-up was a very rough sketch on a post-it note. I'm no artist, but I liked it enough to keep going. So I patched together a mood board of artistic stuff, in a folder on my desktop, booted-up some illustration software and got started...
+The first mock-up was a very rough sketch on a post-it note. I'm no artist, but I liked it enough to keep going. So I patched together a mood board of various designs, in a folder on my desktop, booted-up some illustration software and got started...
 
 Additionally, there's some amazing artists out there. If you know where to look, there's influential creativity everywhere. (E.g. [Dribbble](https://dribbble.com/shots/5781741-Potion-of-Wisdom-Speedpaint), [Reddit](https://www.reddit.com/r/Design/comments/b68bvu/heres_a_quick_breakdowntutorial_on_how_i_animate/), [Artstation](https://www.artstation.com/artwork/9m18kN), ...)
 
 ## Inkscape
 
-On the topic of illustration software, there are a few options to choose from. I've used a trial of Adobe Illustrator before, which was excellent, but not remotely worth it's cost or contract lock-in. So I gave [Inkscape](https://inkscape.org/) a try. It turned out to be a great piece of software, and open-source which is always amazing. Albeit, it could use a bit more documentation and a few official tutorials. But, all that meant was it needed some exploring...
+On the topic of illustration software, there are a few options to choose from. I've used a trial of Adobe Illustrator before, which was excellent, but not remotely worth it's cost or contract lock-in. So I gave [Inkscape](https://inkscape.org/) a try. It turned out to be a great piece of software, and open-source which is always amazing. Albeit, it could use a bit more documentation and a few official tutorials. But, that only meant it needed some exploring...
 
 One excellent feature of Vector Graphic tools is the clipping mask. It unlocks a huge number of possibilities for animations, as you can create a complex shapes in a background layer and send objects across the gap. This allows certain objects to leave the apparent field of view; by matching the colour of the mask to the webpage background. (E.g. The blue multi-hexagon shape of `potions.svg` was cut-out, and has a periodic, sweeping line rotating across the gap). To create a clipping mask:
 
@@ -44,7 +44,7 @@ CSS can be easily included in SVGs using the `<foreignObject>` tag. Simply inser
 
 ## Dark Mode Detection
 
-Since GitHub has a dark mode, we need to account for that in the design. Luckily, CSS introduced the `prefers-color-scheme` property in 2019. So we can throw some fairly simple media queries in our CSS to handle that. For instance:
+Since GitHub has a dark mode, we need to account for that in the design. The obvious solution is the CSS property `prefers-color-scheme`, launched in 2019. Luckily, it can be handled using some fairly simple media queries in our CSS. For instance:
 
 <!-- prettier-ignore -->
 ```css
@@ -56,7 +56,7 @@ Since GitHub has a dark mode, we need to account for that in the design. Luckily
 }
 ```
 
-However, it no longer works here, and is most likely deliberately not supported. Fortunately, an alternative method of dark-mode detection does exist; specific to [GitHub flavoured markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#specifying-the-theme-an-image-is-shown-to). Still, it does come with caveats. It requires two files, and may not always work when the readme is viewed from an external source. (E.g. [NPM](https://www.npmjs.com/), [crates.io](https://crates.io/), ...). Neither is a significant problem in this instance.
+However, it no longer works on GitHub, and is most likely deliberately not supported. Fortunately, an alternative method of dark-mode detection does exist; specific to [GitHub flavoured markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#specifying-the-theme-an-image-is-shown-to). Still, it does come with some caveats. It requires two files, and may not always work when the readme is viewed from an external source. (E.g. [NPM](https://www.npmjs.com/), [crates.io](https://crates.io/), ...). But neither is a significant problem in this instance.
 
 ```
 ![Potions](./potions-light.svg#gh-light-mode-only)
