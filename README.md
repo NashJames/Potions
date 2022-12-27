@@ -1,7 +1,7 @@
 # Potions
 
-<img align="right" width="500" src="./src/potions-light.svg?sanitize=true#gh-light-mode-only">
-<img align="right" width="500" src="./src/potions-dark.svg?sanitize=true#gh-dark-mode-only">
+<img align="right" width="500" src="https://raw.githubusercontent.com/NashJames/Potions/master/src/potions-light.svg?sanitize=true#gh-light-mode-only" />
+<img align="right" width="500" src="https://raw.githubusercontent.com/NashJames/Potions/master/src/potions-dark.svg?sanitize=true#gh-dark-mode-only" />
 
 ## Design
 
@@ -56,7 +56,7 @@ Since GitHub has a dark mode, we need to account for that in the design. The obv
 }
 ```
 
-However, it no longer works on GitHub, and is most likely deliberately not supported. Fortunately, an alternative method of dark-mode detection does exist; specific to [GitHub flavoured markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#specifying-the-theme-an-image-is-shown-to). Still, it does come with some caveats. It requires two files, and may not always work when the readme is viewed from an external source. (E.g. [NPM](https://www.npmjs.com/), [crates.io](https://crates.io/), ...). But neither is a significant problem in this instance.
+However, it no longer works on GitHub, and is most likely deliberately not supported. Fortunately, an alternative method of dark-mode detection does exist; specific to [GitHub flavoured markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#specifying-the-theme-an-image-is-shown-to). It works perfectly, even with some caveats worth being aware of. It requires two files, and may not always work when the readme is viewed from an external source (e.g. [NPM](https://www.npmjs.com/), [crates.io](https://crates.io/), ...). But neither is a significant problem in this instance.
 
 ```
 ![Potions](./potions-light.svg#gh-light-mode-only)
