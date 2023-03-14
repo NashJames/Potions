@@ -16,6 +16,7 @@ On the topic of illustration software, there are a few options to choose from. I
 One excellent feature of Vector Graphic tools is the clipping mask. It unlocks a huge number of possibilities for animations, as you can create a complex shapes in a background layer and send objects across the gap. This allows certain objects to leave the apparent field of view; by matching the colour of the mask to the webpage background. (E.g. The blue multi-hexagon shape of `potions.svg` was cut-out, and has a periodic, sweeping line rotating across the gap).
 
 <!-- **To create a clipping mask:**  -->
+
 In Inkscape, the steps are as follows:
 
 - Draw your background layer
@@ -72,7 +73,9 @@ There are a few caveats worth being aware of. It does require two files, and bot
 
 ## Additional Notes
 
-SVGs are obviously scalable by design, but that statement is not _entirely_ true. Icons are a great example. If you design something at 16x16 pixels, then scale it to 24x24, it could appear to have blurred edges. This is known as `anti-aliasing`, and it's likely you've heard the term before. It's the process of blending outer-edge  pixels to reduce contrast and create a smoother picture. It's not always necessary. There is a CSS property known as [`shape-rendering`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/shape-rendering), which can provide a solution in specific situations. However, in the case of icons, you may require several additional icon sets for each common size (16x16, 20x20, 24x24, 32x32, etc.) to circumvent the issue.
+SVGs are obviously scalable by design, but that statement is not _entirely_ true. Icons are a great example. If you design something at 16x16 pixels, then scale it to 24x24, it could appear to have blurred edges. This is known as `anti-aliasing`, and it's likely you've heard the term before. It's the process of blending outer-edge pixels to reduce contrast and create a smoother picture.
+
+It's not always helpful. Luckily, there is a CSS property known as [`shape-rendering`](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/shape-rendering), which can provide a solution in specific situations. However, in the case of icons, you may require several additional icon sets for each common size (16x16, 20x20, 24x24, 32x32, etc.) to circumvent the issue.
 
 ## Acknowledgements
 
