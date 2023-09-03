@@ -25,7 +25,8 @@ In Inkscape, the steps are as follows:
 - Select both
 - Navigate to `Object` --> `Mask` --> `Set Inverse (LPE)`
 
-> **Warning** <br> [Bug]: The clipping mask is sometimes not visible in other software. There is a temporary workaround listed [here](https://gitlab.com/inkscape/inkscape/-/issues/3183).
+> **Warning**
+> [Bug]: The clipping mask is sometimes not visible in other software. There is a temporary workaround listed [here](https://gitlab.com/inkscape/inkscape/-/issues/3183).
 
 Also, since Inkscape saves vector graphics in their own personalised format, here are some steps I use to prepare it for handling code:
 
